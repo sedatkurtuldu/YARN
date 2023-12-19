@@ -78,7 +78,6 @@ const MyProfileModal = ({ navigation }) => {
       <ProfileModalButton text={t("profile.card.myaddress")}  isSurvey={false} isArrow={true} iconComponentName={'Feather'} iconName={'map'} logout={""}/> 
       <ProfileModalButton text={t("profile.card.games")}  isSurvey={false} isArrow={true} iconComponentName={'MaterialCommunityIcons'} iconName={'puzzle-outline'} logout={""}/> 
       <ProfileModalButton text={t("profile.card.settings")}  isSurvey={false} isArrow={true} iconComponentName={'Feather'} iconName={'settings'} logout={""}/> 
-      <ProfileModalButton text={t("profile.card.myhopisurvey")}  isSurvey={true} isArrow={true} iconComponentName={'Octicons'} iconName={'checklist'} logout={""}/>
       <ProfileModalButton text={t("logout")} isSurvey={false} isArrow={false}  iconComponentName={'MaterialIcons'} iconName={'logout'} logout={logOut}/> 
     </View>
    

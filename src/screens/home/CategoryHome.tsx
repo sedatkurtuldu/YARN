@@ -28,6 +28,7 @@ const CategoryHome = () => {
     return (
         <FlatList
             style={styles.container}
+            //@ts-ignore
             data={categories}
             renderItem={renderCategory}
             keyExtractor={(item) => item.id.toString()}
@@ -51,15 +52,16 @@ const styles = StyleSheet.create({
         height: imageWidth,
         marginHorizontal: 6,
         marginVertical: -15,
-        resizeMode: 'contain'
+        resizeMode: 'contain',
     },
     categoryText: {
         position: "absolute",
-        bottom: "15%",
-        left: "8%",
+        top: '50%',
+        left: "12%",
         fontWeight: "bold",
-        fontSize: 15,
+        fontSize: 13,
         width: imageWidth * 0.8,
         flexWrap: 'wrap',
+        textAlign: 'center'
     }
 })

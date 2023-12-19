@@ -11,7 +11,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAuths } from "../slices/authsSlice";
-import { getIconUrl, selectIconUrls } from "../slices/hopiIconSlice";
+import { getIconUrl, selectIconUrls } from "../slices/yarnLogoSlice";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import BrandMap from "../screens/home/BrandMap";
 import { addResources } from "../../i18n";
@@ -81,7 +81,7 @@ export default function HomeRoutes({ route }) {
            <TouchableOpacity style={{ paddingLeft: 10 }} onPress={() => navigation.navigate('MyProfileModal')}>
             <Ionicons style={styles.headerLeftIcon} name="ios-person-outline" size={20} color="black" />
               <View style={styles.dot}>
-                <Text style={styles.dotNumber}>6</Text>
+                <Text style={styles.dotNumber}>7</Text>
               </View>
           </TouchableOpacity>
         </View>

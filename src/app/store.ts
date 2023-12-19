@@ -6,7 +6,7 @@ import categoriesHomeSlice from "../slices/categoryHomeSlice";
 import categoriesBrandSlice from "../slices/categoryBrandSlice";
 import authsSlice from "../slices/authsSlice";
 import myPaginatedCarouselsSlice from "../slices/myPaginatedCarouselSlice";
-import iconUrlsSlice from "../slices/hopiIconSlice";
+import iconUrlsSlice from "../slices/yarnLogoSlice";
 import myShoppingCarouselSlice from "../slices/myShoppingCarouselSlice";
 import phonesSlice from "../slices/phonesSlice";
 import androidPhonesSlice from "../slices/androidPhones";
@@ -16,12 +16,14 @@ import hopiPayButtonImageSlice from "../slices/hopiPayButtonImages";
 import myCardsSlice from "../slices/myCards";
 import myCardsBottomSlice from "../slices/myCardsBottom";
 import myOtherCardsSlice from "../slices/myOtherCards";
+import yarnOffersSlice from "../slices/yarnOffersSlice";
 
 const store = configureStore({
   reducer: {
     campaign: campaignsSlice.reducer,
     banner: bannersSlice.reducer,
     offer: offersSlice.reducer,
+    yarnOffer: yarnOffersSlice.reducer,
     category: categoriesHomeSlice.reducer,
     categoryBrand: categoriesBrandSlice.reducer,
     auth: authsSlice.reducer,

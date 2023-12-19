@@ -19,7 +19,7 @@ const WelcomeScreen = () => {
 
 
   useEffect(() => {
-    const storageRef = ref(storage, 'images/welcomePhoto.png');
+    const storageRef = ref(storage, 'images/welcome.png');
 
     getDownloadURL(storageRef)
       .then((url) => {

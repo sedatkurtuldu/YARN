@@ -30,6 +30,25 @@ import {
     return getOffers;
   };
 
+  const YARN_OFFERS_TABLE = "yarnOffers";
+
+  export const getYarnOffers = async () => {
+    const imagesCollection = collection(db, YARN_OFFERS_TABLE);
+    const snapshot = await getDocs(imagesCollection);
+  
+    const getYarnOffers = snapshot.docs.map((doc) => {
+      const id = doc.id;
+      const image = doc.data();
+      return {
+        id: id,
+        title: image.title,
+        description: image.description,
+        url: image.url
+      };
+    });
+    return getYarnOffers;
+  };
+
   const CAMPAIGNS_TABLE = "campaigns";
 
   export const getCampaings = async () => {
