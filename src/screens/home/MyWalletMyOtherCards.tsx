@@ -1,9 +1,6 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
+import { StyleSheet, View, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { getDownloadURL, ref } from 'firebase/storage';
-import { useState } from 'react';
 import { useEffect } from 'react';
-import { storage } from '../../services/firebase';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMyOtherCards, selectMyOtherCards } from '../../slices/myOtherCards';
 

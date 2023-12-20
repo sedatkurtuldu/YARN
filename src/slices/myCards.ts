@@ -12,7 +12,7 @@ export const getMyCards = createAsyncThunk(
     "myCards/getMyCards",
     async () => {
       try {
-        const storageRef = ref(storage, 'icons/mycards.png');
+        const storageRef = ref(storage, 'icons/yarncreditcard.png');
         const url = await getDownloadURL(storageRef);
         return url;
       } catch (error) {

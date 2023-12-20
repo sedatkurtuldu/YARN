@@ -61,7 +61,7 @@ const PasswordScreen = ({ route }) => {
       <Text style={styles.headerText}>{t("password")}</Text>
     </View>
     <View style={styles.description}>
-      <Text style={styles.descriptionText}>{t("stepintohopiworld")}</Text>
+      <Text style={styles.descriptionText}>{t("stepintoyarnworld")}</Text>
     </View>
     <View style={styles.textInputContainer}>
      <TextInput

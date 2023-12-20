@@ -33,6 +33,7 @@ const MyPaginatedCarousel = () => {
          else {
           addResources(tr);
          }
+         
     }, []);
 
   const renderItem = ({ item }) => (
@@ -49,10 +50,10 @@ const MyPaginatedCarousel = () => {
             </TouchableOpacity>
           ) : (item.price === 'Daha Fazla Gör >' || item.price === 'Daha Fazla Gör >') && language === 'tr' ? (
             <TouchableOpacity>
-              <Text style={styles.priceButton}>{item.priceEN}</Text>
+              <Text style={styles.priceButton}>{item.price}</Text>
             </TouchableOpacity>
           ) : (
-            <Text style={styles.priceText}>{item.price} ₺</Text>
+            <Text style={styles.priceText}>{item.price}</Text>
           )
         }
 

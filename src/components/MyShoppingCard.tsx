@@ -25,7 +25,7 @@ const MyShoppingCard = ({ description, url, price, type, title, denemeWidth }) =
       <View style={styles.content}>
         {title === "''" ? <Text style={styles.titleText}></Text> : <Text style={styles.titleText}>{title}</Text>}
         <Text style={styles.description}>{description}</Text>
-        <Text style={styles.price}>{price} ₺</Text>
+        <Text style={styles.price}>{price}</Text>
       </View>
       <TouchableOpacity style={styles.plusIcon}>
         <AntDesign name="pluscircle" size={windowWidth * 0.06} color="#e81f89" />

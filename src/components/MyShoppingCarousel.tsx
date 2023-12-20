@@ -5,7 +5,6 @@ import {
   Text,
   Dimensions,
   StyleSheet,
-  TouchableOpacity,
   Platform,
 } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';

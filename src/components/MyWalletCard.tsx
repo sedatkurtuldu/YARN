@@ -26,7 +26,7 @@ const MyWalletCard = () => {
         <View style={styles.cardContainer}>
         <View style={styles.leftOfCard}>
           <Text style={styles.leftCardText}>{t("totalcoins")}</Text>
-          <Text style={styles.secondLeftCardText}>3.650,00</Text>
+          <Text style={styles.secondLeftCardText}>2.849,00</Text>
           <View style={styles.textBorder}></View>
           <View style={styles.leftCardBottom}>
             <View style={styles.leftCardBottomInline}>
@@ -34,7 +34,7 @@ const MyWalletCard = () => {
               <Text style={styles.leftCardBottomText2}>{t("coins")}</Text>
             </View>
             <View style={styles.leftCardBottomInline}>
-              <Text style={styles.leftCardBottomText3}>3.650,00</Text>
+              <Text style={styles.leftCardBottomText3}>2.849,00</Text>
               <Text style={styles.leftCardBottomText4}>{t("giftcoins")}</Text>
             </View>
             <View style={styles.leftCardBottomInline}>
@@ -45,7 +45,7 @@ const MyWalletCard = () => {
         </View>
         <View style={styles.rightOfCard}>
         <View style={styles.circle}>
-          <Text style={styles.rightCardText1}>3.650,00</Text>
+          <Text style={styles.rightCardText1}>2.849,00</Text>
           <Text style={styles.rightCardText2}>{t("coins")}</Text>
         </View>
         <TouchableOpacity>

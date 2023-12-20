@@ -2,18 +2,16 @@ import { StyleSheet, Text, View, Image, TouchableOpacity, Dimensions } from 'rea
 import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getHopiPayImage, selectHopiPayImage } from '../../slices/hopiPayImages';
-import { getHopiPayButtonImage, selectHopiPayButtonImage } from '../../slices/hopiPayButtonImages';
+import { getPayCardImage, selectPayCardImage } from '../../slices/payCardSlice';
 import expoLanguageDetector from '../../../plugins/expoLanguageDetector';
 import { useTranslation } from 'react-i18next';
 import { addResources } from '../../../i18n';
 import { en, tr } from '../../../locales';
 import { FontAwesome5 } from '@expo/vector-icons';
 
-const MyWalletHopiPay = () => {
+const MyWalletPayCard = () => {
 
-  const hopiPayImageUrl = useSelector(selectHopiPayImage)
-  const hopiPayButtonImageUrl = useSelector(selectHopiPayButtonImage)
+  const payCardImageUrl = useSelector(selectPayCardImage)
 
   const dispatch = useDispatch();
 
@@ -31,9 +29,7 @@ const MyWalletHopiPay = () => {
 
   useEffect(() => {
     //@ts-ignore
-    dispatch(getHopiPayImage())
-    //@ts-ignore
-    dispatch(getHopiPayButtonImage())
+    dispatch(getPayCardImage())
 
     if(language == "en") {
       addResources(en);
@@ -45,21 +41,20 @@ const MyWalletHopiPay = () => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.hopipay}>
-        <Image style={styles.hopipayImage} source={{uri: hopiPayImageUrl}} />
+      <View style={styles.yarnCard}>
+        <Image style={styles.yarnCardImage} source={{uri: payCardImageUrl}} />
       </View>
       <TouchableOpacity
         style={{
-          ...styles.hopipayButton,
+          ...styles.yarnCardButton,
           width: windowWidth * buttonWidthRatio,
           height: windowHeight * buttonHeightRatio,
           left: windowWidth * buttonLeftRatio,
           top: windowHeight * buttonTopRatio,
         }}
       >
-        {/* <Image style={styles.hopipayButtonImage} source={{uri: hopiPayButtonImageUrl}} /> */}
-        <View style={styles.hopipayCreateButton}>
-          <Text style={styles.hopipayCreateButtonText}>{t("hopipay.create")}</Text>
+        <View style={styles.yarnCardCreateButton}>
+          <Text style={styles.yarnCardCreateButtonText}>{t("yarncard.create")}</Text>
           <FontAwesome5 name="angle-right" size={18} color="white" />
         </View>
       </TouchableOpacity>
@@ -67,43 +62,38 @@ const MyWalletHopiPay = () => {
   )
 }
 
-export default MyWalletHopiPay
+export default MyWalletPayCard
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#ffffff',
   },
-  hopipay: {
+  yarnCard: {
     marginVertical: 20,
     borderRadius: 20,
     paddingHorizontal: 20,
   },
-  hopipayImage: {
+  yarnCardImage: {
     width: '100%',
     height: '84%',
     resizeMode: 'stretch',
     borderRadius: 28,
   },
-  hopipayButton: {
+  yarnCardButton: {
     position: 'absolute',
     borderRadius: 12,
+    marginTop: '5%'
   },
-  hopipayCreateButton: {
+  yarnCardCreateButton: {
     backgroundColor: "#3ab44a",
     padding: 14,
     borderRadius: 16,
     flexDirection: "row",
     justifyContent: "space-around"
   },
-  hopipayCreateButtonText: {
+  yarnCardCreateButtonText: {
     color: "white",
     fontWeight: "bold",
   }
-  // hopipayButtonImage: {
-  //   width: '100%',
-  //   height: '100%',
-  //   resizeMode: 'stretch',
-  //   borderRadius: 12,
-  // },
 })

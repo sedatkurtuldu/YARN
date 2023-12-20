@@ -11,12 +11,11 @@ import myShoppingCarouselSlice from "../slices/myShoppingCarouselSlice";
 import phonesSlice from "../slices/phonesSlice";
 import androidPhonesSlice from "../slices/androidPhones";
 import appleIosPhonesSlice from "../slices/appleIosPhones";
-import hopiPayImageSlice from "../slices/hopiPayImages";
-import hopiPayButtonImageSlice from "../slices/hopiPayButtonImages";
 import myCardsSlice from "../slices/myCards";
 import myCardsBottomSlice from "../slices/myCardsBottom";
 import myOtherCardsSlice from "../slices/myOtherCards";
 import yarnOffersSlice from "../slices/yarnOffersSlice";
+import payCardImageSlice from "../slices/payCardSlice";
 
 const store = configureStore({
   reducer: {
@@ -33,8 +32,7 @@ const store = configureStore({
     phone: phonesSlice.reducer,
     androidPhone: androidPhonesSlice.reducer,
     appleIosPhone: appleIosPhonesSlice.reducer,
-    hopipayimage: hopiPayImageSlice.reducer,
-    hopipaybuttonimage: hopiPayButtonImageSlice.reducer,
+    paycardimage: payCardImageSlice.reducer,
     mycard: myCardsSlice.reducer,
     mycardbottom: myCardsBottomSlice.reducer,
     myothercard: myOtherCardsSlice.reducer

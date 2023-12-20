@@ -39,7 +39,7 @@ const Phones = () => {
         key={item.id}
         description={language == "en" ? item.descriptionEN : item.description}
         url={item.url}
-        price={item.price}
+        price={language === "en" ? item.priceEN : item.price}
         type={item.type}
         title={item.title}
         denemeWidth={screenWidth}

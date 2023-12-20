@@ -345,6 +345,7 @@ import {
         description: phone.description,
         descriptionEN: phone.descriptionEN,
         price: phone.price,
+        priceEN: phone.priceEN,
         type: phone.type,
         url: phone.url
       };
@@ -367,6 +368,7 @@ import {
           description: phone.description,
           descriptionEN: phone.descriptionEN,
           price: phone.price,
+          priceEN: phone.priceEN,
           type: phone.type,
           url: phone.url,
         };
@@ -389,6 +391,7 @@ export const getIPhones = async () => {
         description: phone.description,
         descriptionEN: phone.descriptionEN,
         price: phone.price,
+        priceEN: phone.priceEN,
         type: phone.type,
         url: phone.url,
       };

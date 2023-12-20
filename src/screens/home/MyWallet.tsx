@@ -1,7 +1,6 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useEffect } from 'react'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import MyWalletHopiPay from './MyWalletHopiPay';
 import MyWalletMyCards from './MyWalletMyCards';
 import MyWalletMyOtherCards from './MyWalletMyOtherCards';
 import MyWalletCard from '../../components/MyWalletCard';
@@ -9,6 +8,7 @@ import expoLanguageDetector from '../../../plugins/expoLanguageDetector';
 import { useTranslation } from 'react-i18next';
 import { addResources } from '../../../i18n';
 import { en, tr } from '../../../locales';
+import MyWalletPayCard from './MyWalletPayCard';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -58,9 +58,9 @@ const MyWallet = () => {
           },
         })}
       >
-     <Tab.Screen name="MyWalletHopiPay" component={MyWalletHopiPay} 
+     <Tab.Screen name="MyWalletPayCard" component={MyWalletPayCard} 
        options={{
-        tabBarLabel: t("hopipay"),
+        tabBarLabel: t("yarncard"),
         
        }}
       

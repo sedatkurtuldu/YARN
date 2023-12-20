@@ -36,13 +36,13 @@ const Shopping = () => {
 
       <View>
         <ShoppingPhones
-          titleText={t("phoneopportunity")}
+          titleText={t("opportunity")}
           firstTabName={'Phones'}
           secondTabName={'AndroidPhones'}
           thirdTabName={'ApplePhones'}
-          firstTabLabel={t("mobilephones")}
-          secondTabLabel={t("androidphones")}
-          thirdTabLabel={t("appleiosphones")}
+          firstTabLabel={t("opportunities")}
+          secondTabLabel={t("membershipopportunities")}
+          thirdTabLabel={t("spendingopportunities")}
           firstTabComponent={Phones}
           secondTabComponent={AndroidPhones}
           thirdTabComponent={ApplePhones}

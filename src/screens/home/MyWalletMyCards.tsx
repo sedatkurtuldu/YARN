@@ -1,9 +1,6 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { useEffect } from 'react';
-import { useState } from 'react';
-import { getDownloadURL, ref } from 'firebase/storage';
-import { storage } from '../../services/firebase';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMyCards, selectMyCards } from '../../slices/myCards';
 import { getMyCardsBottom, selectMyCardsBottom } from '../../slices/myCardsBottom';
@@ -15,7 +12,6 @@ import { en, tr } from '../../../locales';
 const MyWalletMyCards = () => {
 
   const myCards = useSelector(selectMyCards)
-  const myCardsBottom = useSelector(selectMyCardsBottom)
   const dispatch = useDispatch();
 
   const language = expoLanguageDetector.detect();
@@ -45,12 +41,8 @@ const MyWalletMyCards = () => {
         <Image style={styles.istanbulkartImage} source={{uri: myCards}} />
         <View style={styles.textContainer}>
           <Text style={styles.text1}>{t("mywalletcards.creditcard")}</Text>
-          <Text style={styles.text2}>{t("mywalletcards.registeredcard")}</Text>
         </View>
       </View>
-      <TouchableOpacity style={styles.masterpass}>
-        <Image style={styles.masterpassImage} source={{uri: myCardsBottom}}></Image>
-      </TouchableOpacity>
     </View>
   );
 };
